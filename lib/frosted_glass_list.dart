@@ -32,13 +32,18 @@ class _FrostedListState extends State<FrostedList> {
             );
           },
           itemBuilder: (context, index) {
-            return Container(
-              key: Key(index.toString()),
-              width: double.infinity,
-              child: Center(
-                child: Text(
-                  lyrics[index],
-                  style: TextStyle(fontWeight: FontWeight.w700, fontSize: 40.0),
+            return GestureDetector(
+              onTap: () {
+              },
+              child: Container(
+                key: Key(index.toString()),
+                width: double.infinity,
+                child: Center(
+                  child: Text(
+                    lyrics[index],
+                    style:
+                        TextStyle(fontWeight: FontWeight.w700, fontSize: 40.0),
+                  ),
                 ),
               ),
             );
